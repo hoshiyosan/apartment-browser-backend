@@ -14,6 +14,10 @@
   - [Develop using this template](#develop-using-this-template)
     - [Install dependencies](#install-dependencies)
     - [Bring up services locally](#bring-up-services-locally)
+    - [Requirements](#requirements)
+    - [Install dev. dependencies](#install-dev-dependencies)
+    - [Setup additional services](#setup-additional-services)
+    - [Run backend](#run-backend)
     - [Show project commands](#show-project-commands)
 
 ## Setup your project
@@ -65,7 +69,29 @@ make install
 
 ### Bring up services locally
 
-To locally run services required by backend
+### Requirements
+
+- docker
+- docker-compose
+- pipenv
+
+### Install dev. dependencies
+
+It is recommended that you add this to your bashrc or in your current 
+terminal to create virtualenv in your project.
+Otherwise your IDE won't be able to lint correctly.
+```
+export PIPENV_VENV_IN_PROJECT=1
+```
+
+Then install dependencies in a virtualenv using
+```
+pipenv install
+```
+
+### Setup additional services
+
+To quickly run services required by backend on your local machine, run
 ```
 docker-compose up
 ```
@@ -73,6 +99,12 @@ docker-compose up
 It will bring up :
 - a mongo database on http://localhost:27017
 - a mongo web ui on http://localhost:1234
+
+### Run backend
+
+```
+pipenv run serve
+```
 
 ### Show project commands
 
@@ -96,3 +128,4 @@ Deployment commands
   major       Deploy a new patch version of this package
 ```
 
+These values are the default ones in `settings.py` when not overriden by environment variables.
