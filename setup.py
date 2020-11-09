@@ -12,9 +12,9 @@ def list_requirements():
 
 
 setuptools.setup(
-    name='example',
-    description='example package structure',
-    version='0.0.8',
+    name='apartment_browser',
+    description='Backend used by "apartment browser" web extensions',
+    version='0.0.1',
     packages=setuptools.find_packages(),
     install_requires=list_requirements()
 )

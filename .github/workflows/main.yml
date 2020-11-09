@@ -12,7 +12,7 @@ on:
 
 env:
   PYTHON_VERSION: 3.8
-  PACKAGE_NAME: example
+  PACKAGE_NAME: apartment_browser
 
 
 jobs:

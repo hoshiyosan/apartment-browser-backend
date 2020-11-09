@@ -1,12 +1,10 @@
-# Python package template
+# Apartment browser backend
 
-> Example structure of python project for automatic CI/CD.
->
-> **Included**: Linting, tests, releases to pypi.
+> Backend used by "apartment browser" web extensions.
 
 ## Table of contents
 
-- [Python package template](#python-package-template)
+- [Apartment browser backend](#apartment-browser-backend)
   - [Table of contents](#table-of-contents)
   - [Develop using this template](#develop-using-this-template)
     - [Install dependencies](#install-dependencies)
