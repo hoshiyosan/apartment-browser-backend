@@ -18,6 +18,11 @@ lint: ## Lint package using pylint
 test: ## Run tests sets
 	pipenv run python -m pytest -s tests/
 
+twine: ## Manually build and distribute current version of package using twine
+	pipenv run python setup.py sdist bdist_wheel
+	pipenv run twine upload dist/*
+
+
 ##@ Deployment commands
 
 stage: # Add commonly edited files to avoid manually commiting a minor change...
