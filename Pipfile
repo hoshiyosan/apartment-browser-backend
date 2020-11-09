@@ -3,7 +3,16 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
+[scripts]
+serve = "uvicorn apartment.server:asgi_app --reload"
+lint = "pylint apartment/"
+
 [packages]
+sanic = "*"
+uvicorn = "*"
+gunicorn = "*"
+pymongo = "*"
+marshmallow = "*"
 
 [dev-packages]
 bump2version = "*"
@@ -11,6 +20,7 @@ pytest = "*"
 pylint = "*"
 flake8 = "*"
 twine = "*"
+autopep8 = "*"
 
 [requires]
 python_version = "3.8"

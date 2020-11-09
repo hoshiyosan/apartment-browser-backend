@@ -13,6 +13,7 @@
     - [2. CI/CD configuration](#2-cicd-configuration)
   - [Develop using this template](#develop-using-this-template)
     - [Install dependencies](#install-dependencies)
+    - [Bring up services locally](#bring-up-services-locally)
     - [Show project commands](#show-project-commands)
 
 ## Setup your project
@@ -62,6 +63,17 @@ Once these tools available, you will need to install python dev-packages by runn
 make install
 ```
 
+### Bring up services locally
+
+To locally run services required by backend
+```
+docker-compose up
+```
+
+It will bring up :
+- a mongo database on http://localhost:27017
+- a mongo web ui on http://localhost:1234
+
 ### Show project commands
 
 Commands have been defined in Makefile to assist further development.
@@ -83,3 +95,4 @@ Deployment commands
   minor       Deploy a new minor version of this package
   major       Deploy a new patch version of this package
 ```
+
