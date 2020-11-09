@@ -8,9 +8,6 @@
 
 - [Python package template](#python-package-template)
   - [Table of contents](#table-of-contents)
-  - [Setup your project](#setup-your-project)
-    - [1. Adapt this template](#1-adapt-this-template)
-    - [2. CI/CD configuration](#2-cicd-configuration)
   - [Develop using this template](#develop-using-this-template)
     - [Install dependencies](#install-dependencies)
     - [Bring up services locally](#bring-up-services-locally)
@@ -19,37 +16,6 @@
     - [Setup additional services](#setup-additional-services)
     - [Run backend](#run-backend)
     - [Show project commands](#show-project-commands)
-
-## Setup your project
-
-Fork this repository or clone it (and **don't forget to change remote url**).
-
-### 1. Adapt this template
-
-Replace folder `example/` with the one containing your python package.
-
-Change package import in default test (in `tests/` folder).
-
-Edit [setup.py](setup.py) and replace the following rows :
-
-```python
-    name='<package name>',
-    description='<package description>',
-    version='<package version>',
-```
-
-Edit [.github/workflows/main.yml](.github/workflows/main.yml) and replace these rows :
-
-```yaml
-env:
-  PYTHON_VERSION: <python version>
-  PACKAGE_NAME: <package name>
-```
-
-### 2. CI/CD configuration
-
-- Reserve package on PyPI and generate project token.
-- Set the `PYPI_TOKEN` secret under your repository settings.
 
 
 ## Develop using this template
