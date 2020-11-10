@@ -13,3 +13,7 @@ dist/
 
 # only for template project
 Pipfile.lock
+
+# code coverage generated files
+.coverage
+coverage.xml
