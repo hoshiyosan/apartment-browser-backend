@@ -1,15 +1,12 @@
-from marshmallow.exceptions import ValidationError
-from bson import ObjectId
 from .schemas import BookmarkSchema
 from ...addons import db
-from ...coreutils.exceptions import APIError
 from ...coreutils.service import BaseService
 
 
 class BookmarkService(BaseService):
     @classmethod
-    def search(cls, filters={}):
-        return BaseService.search(db.bookmarks, filters=filters)
+    def search(cls, filters=None):
+        return BaseService.search(db.bookmarks, filters=filters or {})
 
     @classmethod
     def validate(cls, data, schema):
@@ -20,7 +17,7 @@ class BookmarkService(BaseService):
         # validate bookmark schema
         validated = BaseService.validate(data, schema=schema)
         # try to get apartment to check it exists
-        BaseService.get_details(db.apartments, validated['apartment_id'])
+        BaseService.get_details(db.apartments, validated["apartment_id"])
         # if it exists allow the creation of this bookmark
         return BaseService.create(db.bookmarks, data, schema=schema)
 

@@ -8,7 +8,6 @@ class ApartmentBrowserException(Exception):
     """
     Base exception for all exceptions defined here.
     """
-    pass
 
 
 class APIError(ApartmentBrowserException):
