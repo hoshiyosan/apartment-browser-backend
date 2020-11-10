@@ -65,7 +65,11 @@ jobs:
 
       - name: Run project's tests sets
         run: |
-          pipenv run python -m pytest tests/ -s
+          pipenv run tests
+
+      - name: Generate courage badge
+        run: |
+          pipenv run codecov
 
 
   pypi_release:
