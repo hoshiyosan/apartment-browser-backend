@@ -1,4 +1,6 @@
--include .env
+include .env
+-include .env.local
+
 
 ##@ Development commands
 
@@ -12,8 +14,10 @@ freeze: ## Freeze requirements version for distribution
 	pipenv lock -r > requirements
 
 lint: ## Lint package using pylint
-	pipenv run pylint example/
-	pipenv run flake8 example/
+	# ~ lint style errors
+	pipenv run flake8 $(PACKAGE_NAME)
+	# ~ lint missing documentation
+	pipenv run pylint $(PACKAGE_NAME)
 
 test: ## Run tests sets
 	pipenv run python -m pytest -s tests/

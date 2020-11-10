@@ -1,6 +1,7 @@
 # ignore virtualenvs
 .venv/
 venv/
+.env.local
 
 # ignore python cache files
 __pycache__/
