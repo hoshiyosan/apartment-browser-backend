@@ -3,6 +3,7 @@
 > Backend used by "apartment browser" web extensions.
 
 ![build badge](https://travis-ci.com/sylvanld/apartment-browser-backend.svg?branch=master&status=passed)
+[![codecov](https://codecov.io/gh/sylvanld/apartment-browser-backend/branch/master/graph/badge.svg)](https://codecov.io/gh/sylvanld/apartment-browser-backend)
 
 ## Table of contents
 
