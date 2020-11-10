@@ -1,6 +1,7 @@
 include .env
 -include .env.local
 
+.PHONY: tests
 
 ##@ Development commands
 
@@ -15,12 +16,12 @@ freeze: ## Freeze requirements version for distribution
 
 lint: ## Lint package using pylint
 	# ~ lint style errors
-	pipenv run flake8 $(PACKAGE_NAME)
+	pipenv run flake8check
 	# ~ lint missing documentation
-	pipenv run pylint $(PACKAGE_NAME)
+	pipenv run pylintcheck
 
-test: ## Run tests sets
-	pipenv run python -m pytest -s tests/
+tests: ## Run tests sets
+	pipenv run tests
 
 twine: ## Manually build and distribute current version of package using twine
 	pipenv run python setup.py sdist bdist_wheel

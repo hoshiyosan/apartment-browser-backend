@@ -7,7 +7,7 @@ name = "pypi"
 serve = "uvicorn apartment.server:asgi_app --reload"
 flake8check = "flake8 ${PACKAGE_NAME}"
 pylintcheck = "pylint ${PACKAGE_NAME}"
-tests = "python -m pytests ${PACKAGE_NAME}"
+tests = "python -m pytest -s tests"
 
 [packages]
 sanic = "*"
