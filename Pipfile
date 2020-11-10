@@ -5,7 +5,8 @@ name = "pypi"
 
 [scripts]
 serve = "uvicorn apartment.server:asgi_app --reload"
-lint = "pylint apartment/"
+flake8check = "flake8 apartment_browser"
+pylintcheck = "pylint apartment_browser"
 
 [packages]
 sanic = "*"
