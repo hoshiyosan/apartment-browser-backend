@@ -2,6 +2,8 @@
 
 > Backend used by "apartment browser" web extensions.
 
+![build badge](https://travis-ci.com/sylvanld/apartment-browser-backend.svg?branch=master&status=passed)
+
 ## Table of contents
 
 - [Apartment browser backend](#apartment-browser-backend)
