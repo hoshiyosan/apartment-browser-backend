@@ -6,19 +6,19 @@
 
 - [Apartment browser backend](#apartment-browser-backend)
   - [Table of contents](#table-of-contents)
-  - [Develop using this template](#develop-using-this-template)
-    - [Install dependencies](#install-dependencies)
+  - [How to contribute ?](#how-to-contribute-)
+    - [Install dev. dependencies](#install-dev-dependencies)
     - [Bring up services locally](#bring-up-services-locally)
     - [Requirements](#requirements)
-    - [Install dev. dependencies](#install-dev-dependencies)
+    - [Install dev. dependencies](#install-dev-dependencies-1)
     - [Setup additional services](#setup-additional-services)
     - [Run backend](#run-backend)
     - [Show project commands](#show-project-commands)
 
 
-## Develop using this template
+## How to contribute ?
 
-### Install dependencies
+### Install dev. dependencies
 
 A few tools are required to work using this template.
 
