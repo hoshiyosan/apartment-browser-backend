@@ -7,9 +7,12 @@ python:
 # command to install dependencies
 install:
   - pip install --upgrade pipenv
+  - pip install codecov
   - pipenv install --dev
 # command to run tests
 script:
   - pipenv run flake8check
   - pipenv run pylintcheck
   - pipenv run tests
+after_success:
+  - codecov
