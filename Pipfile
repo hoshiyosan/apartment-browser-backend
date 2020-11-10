@@ -15,12 +15,15 @@ pymongo = "*"
 marshmallow = "*"
 
 [dev-packages]
-bump2version = "*"
-pytest = "*"
 pylint = "*"
 flake8 = "*"
+black = "*"
+pytest = "*"
+bump2version = "*"
 twine = "*"
-autopep8 = "*"
 
 [requires]
 python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
