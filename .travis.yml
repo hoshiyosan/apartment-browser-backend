@@ -1,0 +1,15 @@
+language: python
+python:
+  - "3.6"
+  - "3.7"
+  - "3.8"
+  - "3.8"
+# command to install dependencies
+install:
+  - pip install --upgrade pipenv
+  - pipenv install --dev
+# command to run tests
+script:
+  - pipenv run flake8check
+  - pipenv run pylintcheck
+  - pipenv run tests
