@@ -7,12 +7,12 @@ python:
   - "3.8"
 # command to install dependencies
 install:
-  - pip install --upgrade pipenv
-  - pipenv install --dev
+  - pip install --upgrade pip flake8 pylint pylint pytest pytest-cov codecov
+  - pip install -r requirements/development
 # command to run tests
 script:
-  - pipenv run flake8check
-  - pipenv run pylintcheck
-  - pipenv run tests
+  - flake8 apartment_browser
+  - pylint apartment_browser
+  - pytest
 after_success:
-  - pipenv run codecov
+  - codecov
