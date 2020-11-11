@@ -18,6 +18,5 @@ setuptools.setup(
     description='Backend used by "apartment browser" web extensions',
     version="0.0.1",
     packages=setuptools.find_packages(),
-    install_requires=list_requirements("production"),
-    extras_require={"development": list_requirements("development")},
+    install_requires=list_requirements("production")
 )
