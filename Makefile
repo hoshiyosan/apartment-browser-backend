@@ -12,7 +12,8 @@ install: ## Install dependencies in a virtualenv
 	pipenv install --dev
 
 freeze: ## Freeze requirements version for distribution
-	pipenv lock -r > requirements
+	pipenv lock -r > requirements/production
+	pipenv lock --dev -r > requirements/development
 
 lint: ## Lint package using pylint
 	# ~ lint style errors
